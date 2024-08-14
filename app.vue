@@ -1,31 +1,31 @@
 <template>
-  <div :class="['lcars-app', themeClass]">
-    <!-- LCARS Header -->
-    <LcarsHeader :title="t('appTitle')" />
+  <NuxtLayout>
+    <div :class="['lcars-app', themeClass]">
+      <!-- LCARS Header -->
+      <LcarsHeader title="LCARS App" />
 
-    <!-- Main Layout with Sidebar and Content -->
-    <div class="lcars-main">
-      <LcarsSidebar />
-      <div class="lcars-content">
-        <NuxtPage />
+      <!-- Main Layout with Sidebar and Content -->
+      <div class="lcars-main">
+        <LcarsSidebar />
+        <div class="lcars-content">
+          <NuxtPage />
+        </div>
       </div>
-    </div>
 
-    <!-- LCARS Footer -->
-    <LcarsFooter />
-  </div>
+      <!-- LCARS Footer -->
+      <LcarsFooter />
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
 import { useTheme } from '~/composables/useTheme';
-import { useI18n } from '~/composables/useI18n';
 import { onMounted, ref } from 'vue';
 import LcarsHeader from '~/components/molecules/LcarsHeader.vue'; // Using LcarsHeader from molecules
 import LcarsSidebar from '~/components/organisms/LcarsSidebar.vue';
 import LcarsFooter from '~/components/organisms/LcarsFooter.vue';
 
-// Setup internationalization and theme management
-const { t } = useI18n();
+// Setup theme management
 const { theme, setTheme } = useTheme();
 const themeClass = ref('');
 

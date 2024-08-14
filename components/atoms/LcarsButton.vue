@@ -1,25 +1,48 @@
 <template>
-  <button :class="buttonClass" @click="handleClick">
+  <button 
+    :class="[buttonClass, customClass]" 
+    @click="emitClick" 
+    :aria-label="ariaLabel"
+    :title="title">
     <slot></slot>
   </button>
 </template>
 
 <script setup>
 import { computed } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
+// Define Props
 const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
   },
+  customClass: {
+    type: String,
+    default: '',
+  },
+  ariaLabel: {
+    type: String,
+    default: 'Button',
+  },
+  title: {
+    type: String,
+    default: '',
+  },
 });
 
+// Emit Events
+const emit = defineEmits(['click']);
+
+// Computed Class
 const buttonClass = computed(() => {
   return `lcars-button lcars-bg-${props.variant} lcars-rounded lcars-padding`;
 });
 
-const handleClick = () => {
-  console.log('Button clicked');
+// Handle Click
+const emitClick = () => {
+  emit('click');
 };
 </script>
 

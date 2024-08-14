@@ -1,0 +1,17 @@
+{
+    "name": "LCARS Nuxt App",
+    "short_name": "LCARS",
+    "description": "A Star Trek LCARS inspired Nuxt.js app",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#ff9933",
+    "icons": [
+      {
+        "src": "/images/logo.svg",
+        "sizes": "192x192",
+        "type": "image/svg+xml"
+      }
+    ]
+  }
+  
