@@ -6,6 +6,7 @@ interface NuxtConfig {
   pwa?: any;
   i18n?: any;
   build?: any;
+  modules?: string[]; // Added to support additional Nuxt modules
 }
 
 interface ConfigLayerMeta {
@@ -19,6 +20,7 @@ interface InputConfig<T, U> {
   pwa?: any;
   i18n?: any;
   build?: any;
+  modules?: string[]; // Added to support additional Nuxt modules
 }
 
 // Declare the defineNuxtConfig function
@@ -28,7 +30,7 @@ export declare function defineNuxtConfig<T extends NuxtConfig, U extends ConfigL
 
 // Export the Nuxt configuration
 export default defineNuxtConfig({
-css: [
+  css: [
     '~/assets/css/main.css',
     '~/assets/css/lcars-theme.css',
     '~/assets/css/lcars-animations.css',
@@ -52,6 +54,10 @@ css: [
     '~/plugins/error-handler.js',
     '~/plugins/analytics.js',
     '~/plugins/pwa.js',
+  ],
+  modules: [
+    '@nuxtjs/pwa', // Ensure the PWA module is included properly
+    '@nuxtjs/i18n', // Ensure the i18n module is included properly
   ],
   pwa: {
     manifest: {
@@ -83,14 +89,18 @@ css: [
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        en: require('./public/localizations/en.json'),
+        en: require('./public/localizations/en.json') as Record<string, string>,
         fr: require('./public/localizations/fr.json'),
       },
     },
   },
   build: {
     rollupOptions: {
-      external: ['pinia', 'chart.js', '@nuxt/bridge'], // Add external dependencies
+      external: ['pinia', 'chart.js', '@nuxt/bridge'], // External dependencies
     },
+    transpile: ['vue-i18n', 'pinia'], // Ensure these modules are properly transpiled
+  },
+  generate: {
+    fallback: '404.html', // Ensure fallback is set for static site generation
   },
 });
