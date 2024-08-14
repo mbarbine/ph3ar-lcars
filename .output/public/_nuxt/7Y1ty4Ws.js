@@ -1,1 +1,0 @@
-import{_ as t,v as s,z as a,x as c,t as o,W as _,X as n}from"./BrfhgYp9.js";const r={class:"lcars-layout"},d={class:"lcars-main-content"},l={__name:"default",setup(p){return(m,u)=>{const e=n;return o(),s("div",r,[a(_),c("main",d,[a(e)])])}}},f=t(l,[["__scopeId","data-v-a9627c97"]]);export{f as default};

@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+// Removed the unnecessary import of defineProps
 
 const props = defineProps({
   initialX: {

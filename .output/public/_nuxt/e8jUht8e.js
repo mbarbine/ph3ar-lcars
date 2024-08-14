@@ -1,1 +1,0 @@
-import{_ as a,v as o,z as s,t,L as c,C as d,D as _,x as p}from"./BrfhgYp9.js";const r=e=>(d("data-v-5d8c1a9d"),e=e(),_(),e),n={class:"lcars-page"},l=r(()=>p("p",null,"The page you are looking for does not exist.",-1)),i={__name:"404",setup(e){return(u,h)=>(t(),o("div",n,[s(c,{title:"Page Not Found"}),l]))}},m=a(i,[["__scopeId","data-v-5d8c1a9d"]]);export{m as default};
