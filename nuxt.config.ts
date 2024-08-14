@@ -1,15 +1,16 @@
-import { defineNuxtConfig } from '@nuxt/bridge';
+import { defineNuxtConfig } from 'nuxt';
+
 export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
     '~/assets/css/lcars-theme.css',
     '~/assets/css/lcars-animations.css',
   ],
-  buildModules: [
+  modules: [
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    'pinia/nuxt',
+    '@pinia/nuxt',
     '@nuxtjs/i18n',
   ],
   plugins: [
@@ -41,7 +42,7 @@ export default defineNuxtConfig({
       runtimeCaching: [
         {
           urlPattern: 'https://fonts.googleapis.com/.*',
-          handler: 'cacheFirst',
+          handler: 'CacheFirst',
         },
       ],
     },
@@ -50,10 +51,12 @@ export default defineNuxtConfig({
     locales: ['en', 'fr'],
     defaultLocale: 'en',
     vueI18n: {
+      legacy: false,
+      locale: 'en',
       fallbackLocale: 'en',
       messages: {
-        en: import('./localizations/en.json'),
-        fr: import('./localizations/fr.json'),
+        en: () => import('./localizations/en.json'),
+        fr: () => import('./localizations/fr.json'),
       },
     },
   },
