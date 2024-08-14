@@ -1,1 +1,125 @@
-.vercel
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Scripts
+
+
+# Nuxt.js build output
+.nuxt/
+dist/
+output/
+coverage/
+
+# Nuxt.js static generated pages
+/static/
+
+# Nuxt.js devtools and temporary files
+.nuxt/
+*.local
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+.nuxt-configs/
+
+# Vercel deployment
+.vercel/
+.env
+.env.*
+
+# Tailwind and PostCSS
+.postcssrc.*
+.tailwindrc.*
+.tailwindcss/
+
+# Logs and debugging
+logs/
+*.log
+*.tlog
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Storybook files
+storybook-static/
+
+# Cypress output
+cypress/screenshots/
+cypress/videos/
+cypress/logs/
+cypress/reports/
+
+# Jest output
+coverage/
+jest-report.html
+jest/
+
+# Build and Cache files
+.cache/
+.pnp.*
+.pnp.js
+build/
+.idea/
+.vscode/
+*.iml
+
+# Generated files by npm or yarn
+package-lock.json
+yarn.lock
+
+# Environment Variables
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*
+
+# Ignore IDE-specific settings files
+.idea/
+
+# Miscellaneous
+.sass-cache/
+*.sass-cache
+
+# Mac-specific files
+.DS_Store
+
+# CI/CD
+coverage/
+.nyc_output/
+.gitlab-ci.yml
+*.code-workspace
+
+# Ignore files for Realm database
+realm-object-server/
+.realm/
+
+# Ignore files for MongoDB
+.mongorc.js
+.mongo/
+
+# Ignore logs
+logs/
+*.log
+logs/
+
+# Ignore vercel cache
+.vercel/cache
+
+# Ignore output from nuxt openapi docs
+.nuxt-openapi-docs/
+
+vercel
