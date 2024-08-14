@@ -1,0 +1,79 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'LCARS';
+  src: url('/fonts/LCARS_analog.woff2') format('woff2'),
+       url('/fonts/LCARS_analog.woff') format('woff'),
+       url('/fonts/LCARS_analog.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #ff9933;
+  --color-secondary: #993399;
+  --color-tertiary: #cc3366;
+  --color-accent: #ffcc00;
+  --color-highlight: #3366ff;
+  --color-dark-bg: #1a1a1a;
+  --color-light-bg: #ffffff;
+}
+
+body {
+  font-family: 'LCARS', sans-serif;
+  background-color: var(--color-dark-bg);
+  color: var(--color-accent);
+}
+
+.lcars-panel {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-primary);
+}
+
+.lcars-header {
+  border-bottom: 2px solid var(--color-accent);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.lcars-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.lcars-button-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.lcars-button-secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.lcars-button:hover {
+  background-color: var(--color-highlight);
+}
+
+.lcars-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-accent);
+}
+
+.lcars-navbar {
+  background-color: var(--color-secondary);
+  padding: 0.5rem;
+}
+
+.lcars-sidebar {
+  background-color: var(--color-tertiary);
+  padding: 1rem;
+  border-right: 2px solid var(--color-accent);
+}

@@ -1,0 +1,43 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'LCARS';
+  src: url('/fonts/LCARS_analog.woff2') format('woff2'),
+       url('/fonts/LCARS_analog.woff') format('woff'),
+       url('/fonts/LCARS_analog.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  @apply bg-black text-white font-LCARS;
+}
+
+a {
+  @apply text-lcarsAccent;
+}
+
+.lcars-sidebar {
+  @apply bg-lcarsSecondary text-lcarsAccent;
+}
+
+.lcars-button {
+  @apply py-2 px-4 text-lg transition-colors;
+}
+
+.lcars-button-primary {
+  @apply bg-lcarsPrimary hover:bg-lcarsHighlight;
+}
+
+.lcars-button-secondary {
+  @apply bg-lcarsSecondary hover:bg-lcarsHighlight;
+}
+
+.lcars-panel {
+  @apply p-4 rounded-lg mb-4;
+}
+
+.lcars-header {
+  @apply py-4 text-center border-b-2 border-lcarsAccent;
+}

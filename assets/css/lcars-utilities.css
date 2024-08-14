@@ -1,0 +1,30 @@
+/* Utility classes for LCARS styling */
+
+.lcars-bg-primary {
+    @apply bg-lcarsPrimary;
+  }
+  
+  .lcars-bg-secondary {
+    @apply bg-lcarsSecondary;
+  }
+  
+  .lcars-bg-tertiary {
+    @apply bg-lcarsTertiary;
+  }
+  
+  .lcars-text-accent {
+    @apply text-lcarsAccent;
+  }
+  
+  .lcars-rounded {
+    @apply rounded-lg;
+  }
+  
+  .lcars-padding {
+    @apply p-4;
+  }
+  
+  .lcars-margin-bottom {
+    @apply mb-4;
+  }
+  

@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start",
+    "test": "jest",
+    "test:unit": "jest --config jest.unit.config.js",
+    "test:integration": "jest --config jest.integration.config.js",
+    "test:e2e": "cypress run",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "name": "lcars-nuxt-app",
+  "version": "1.0.0",
+  "description": "A Star Trek LCARS inspired Nuxt.js app",
+  "dependencies": {
+    "@nuxtjs/devtools": "^1.0.3",
+    "nuxt": "^3.8.2",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/tailwindcss": "^4.0.0",
+    "@nuxtjs/i18n": "^6.15.1",
+    "pinia": "^2.0.14",
+    "chart.js": "^3.7.1",
+    "@nuxt/content": "^1.0.0",
+    "@nuxtjs/axios": "^5.13.6",
+    "core-js": "^3.15.2"
+  },
+  "devDependencies": {
+    "@storybook/vue3": "^6.4.9",
+    "jest": "^27.0.6",
+    "cypress": "^9.1.1",
+    "babel-jest": "^27.0.6"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "welcome": "Welcome to LCARS Nuxt App",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "register": "Register",
+    "analytics": "Analytics"
+  }
+  

@@ -1,0 +1,9 @@
+{
+    "welcome": "Bienvenue dans l'application LCARS Nuxt",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "dashboard": "Tableau de bord",
+    "register": "S'inscrire",
+    "analytics": "Analytique"
+  }
+  
