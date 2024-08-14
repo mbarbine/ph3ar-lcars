@@ -1,16 +1,40 @@
-import { defineNuxtConfig } from 'nuxt';
+// Declare NuxtConfig and related interfaces
+interface NuxtConfig {
+  css?: string[];
+  buildModules?: string[];
+  plugins?: string[];
+  pwa?: any;
+  i18n?: any;
+}
 
+interface ConfigLayerMeta {
+  buildModules?: string[];
+}
+
+interface InputConfig<T, U> {
+  css?: string[];
+  buildModules?: string[];
+  plugins?: string[];
+  pwa?: any;
+  i18n?: any;
+}
+
+// Declare the defineNuxtConfig function
+export declare function defineNuxtConfig<T extends NuxtConfig, U extends ConfigLayerMeta>(
+  config: InputConfig<T, U>
+): T;
+
+// Export the Nuxt configuration
 export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
     '~/assets/css/lcars-theme.css',
     '~/assets/css/lcars-animations.css',
   ],
-  modules: [
+  buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa',
-    '@pinia/nuxt',
+    'pinia/nuxt',
     '@nuxtjs/i18n',
   ],
   plugins: [
@@ -42,7 +66,7 @@ export default defineNuxtConfig({
       runtimeCaching: [
         {
           urlPattern: 'https://fonts.googleapis.com/.*',
-          handler: 'CacheFirst',
+          handler: 'cacheFirst',
         },
       ],
     },
@@ -51,12 +75,10 @@ export default defineNuxtConfig({
     locales: ['en', 'fr'],
     defaultLocale: 'en',
     vueI18n: {
-      legacy: false,
-      locale: 'en',
       fallbackLocale: 'en',
       messages: {
-        en: () => import('./localizations/en.json'),
-        fr: () => import('./localizations/fr.json'),
+        en: require('./public/localizations/en.json'),
+        fr: require('./public/localizations/fr.json'),
       },
     },
   },
