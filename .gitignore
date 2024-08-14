@@ -123,3 +123,4 @@ logs/
 .nuxt-openapi-docs/
 
 vercel
+.env*.local

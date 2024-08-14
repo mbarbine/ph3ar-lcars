@@ -45,6 +45,7 @@ export default defineNuxtConfig({
   ],
   compatibilityDate: '2024-08-14',
   plugins: [
+    '~/plugins/vercel-analytics.js',
     '~/plugins/theme-switcher.js',
     '~/plugins/notification.js',
     '~/plugins/auth.js',

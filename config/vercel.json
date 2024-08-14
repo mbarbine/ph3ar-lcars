@@ -1,6 +1,4 @@
 {
-  "version": 2,
-  "public": true,
   "builds": [
     {
       "src": "nuxt.config.ts",
@@ -8,30 +6,23 @@
       "config": {
         "distDir": ".output"
       }
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/.output/$1"
-    }
+    { "src": "/(.*)", "dest": "/.output/$1" }
   ],
   "crons": [
     {
-      "path": "/api/cron",
+      "path": "/server/api/cron",
       "schedule": "0 10 * * *"
     }
   ],
+  "public": true,
   "env": {
     "NUXT_TELEMETRY_DISABLED": "1",
     "COMPATIBILITY_DATE": "2024-08-14"
+  },
+  "analytics": {
+    "enabled": true
   }
 }
