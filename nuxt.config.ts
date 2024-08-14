@@ -82,15 +82,9 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    vueI18n: './config/i18n.config.js', 
     locales: ['en', 'fr'],
     defaultLocale: 'en',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: require('./public/localizations/en.json') as Record<string, string>,
-        fr: require('./public/localizations/fr.json'),
-      },
-    },
   },
   build: {
     rollupOptions: {
