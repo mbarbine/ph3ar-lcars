@@ -1,54 +1,29 @@
 <template>
-  <button 
-    :class="[buttonClass, customClass]" 
-    @click="emitClick" 
-    :aria-label="ariaLabel"
-    :title="title">
+  <button :class="buttonClass" @click="handleClick">
     <slot></slot>
   </button>
 </template>
 
 <script setup>
 import { computed } from 'vue';
-import { defineProps, defineEmits } from 'vue';
 
-// Define Props
 const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
   },
-  customClass: {
-    type: String,
-    default: '',
-  },
-  ariaLabel: {
-    type: String,
-    default: 'Button',
-  },
-  title: {
-    type: String,
-    default: '',
-  },
 });
 
-// Emit Events
-const emit = defineEmits(['click']);
-
-// Computed Class
 const buttonClass = computed(() => {
   return `lcars-button lcars-bg-${props.variant} lcars-rounded lcars-padding`;
 });
 
-// Handle Click
-const emitClick = () => {
-  emit('click');
+const handleClick = () => {
+  console.log('Button clicked');
 };
 </script>
 
-<style lang="postcss" scoped>
-@import '~@vue/cli-plugin-generate-stylelint-config';
-
+<style scoped>
 .lcars-button {
   @apply text-lg transition-colors lcars-fade-in;
 }
