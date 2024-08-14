@@ -5,8 +5,6 @@
   </template>
   
   <script setup>
-  import { computed, defineProps } from 'vue';
-  
   const props = defineProps({
     variant: {
       type: String,

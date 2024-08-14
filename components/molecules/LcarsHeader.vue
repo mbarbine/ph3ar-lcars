@@ -5,15 +5,12 @@
   </template>
   
   <script setup>
-  import { computed, defineProps } from 'vue'; // Import defineProps
-  
   const props = defineProps({
     variant: {
       type: String,
       default: 'primary',
     },
   });
-  
   const headerClass = computed(() => {
     return `lcars-header lcars-bg-${props.variant}`;
   });
@@ -47,7 +44,7 @@
       padding: 4px;
       margin-bottom: 4px;
       border-bottom-width: 2px;
-      border-color: lcarsAccent;
+      border-color: var(--lcarsAccent); /* Use the defined lcarsAccent color */
       animation: fade-in 1s;
   }
   

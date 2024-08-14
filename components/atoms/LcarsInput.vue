@@ -7,14 +7,13 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
-
 const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
   },
 });
+</script>
 
 const inputClass = computed(() => {
   return `lcars-input lcars-bg-${props.variant} lcars-rounded lcars-padding`;

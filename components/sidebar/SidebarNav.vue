@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from 'vue';
-
 const props = defineProps({
   variant: {
     type: String,
@@ -15,14 +13,15 @@ const props = defineProps({
 });
 
 const navClass = computed(() => {
-  return `sidebar-nav lcars-bg-${props.variant}`;
+  return `lcars-navbar lcars-bg-${props.variant}`;
 });
 </script>
 
 <style scoped>
-.sidebar-nav {
+.lcars-navbar {
   padding: 10px;
-  font-size: 1.2rem;
-  background-color: var(--lcarsPrimary);
+  color: #fff;
+  text-align: center;
+  background-color: var(--lcars-primary);
 }
 </style>

@@ -3,22 +3,17 @@
       <slot></slot>
     </header>
   </template>
-  
   <script setup>
-  import { computed, defineProps } from 'vue';
-  
   const props = defineProps({
     variant: {
       type: String,
       default: 'primary',
     },
   });
-  
+  </script>
   const headerClass = computed(() => {
     return `lcars-header lcars-bg-${props.variant}`;
   });
-  </script>
-  
   <style scoped>
   @import 'assets/css/lcars.css';
   
