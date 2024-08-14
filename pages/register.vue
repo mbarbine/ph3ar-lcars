@@ -28,7 +28,7 @@ const handleRegister = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/variables.scss";
+@import "/assets/styles/variables.scss";
 
 .lcars-auth-page {
   @apply p-8 bg-darkBg text-white;

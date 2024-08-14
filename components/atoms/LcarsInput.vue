@@ -21,7 +21,7 @@ const inputClass = computed(() => {
 </script>
 
 <style scoped lang="scss">
-@import "@/styles/variables.scss";
+@import "/assets/styles/variables.scss";
 
 .lcars-input {
   font-size: 1.5rem;
