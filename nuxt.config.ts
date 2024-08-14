@@ -45,14 +45,12 @@ export default defineNuxtConfig({
   ],
   compatibilityDate: '2024-08-14',
   plugins: [
-    '~/plugins/vercel-analytics.js',
     '~/plugins/theme-switcher.js',
     '~/plugins/notification.js',
     '~/plugins/auth.js',
     '~/plugins/pinia-plugin.js',
     '~/plugins/seo.js',
     '~/plugins/error-handler.js',
-    '~/plugins/analytics.js',
     '~/plugins/pwa.js',
   ],
   modules: [
