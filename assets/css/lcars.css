@@ -10,9 +10,9 @@
 
 @font-face {
     font-family: 'LCARS';
-    src: url('/fonts/LCARS_analog.woff2') format('woff2'),
-         url('/fonts/LCARS_analog.woff') format('woff'),
-         url('/fonts/LCARS_analog.ttf') format('truetype');
+    src: url('/assets/fonts/LCARS_analog.woff2') format('woff2'),
+         url('/assets/fonts/LCARS_analog.woff') format('woff'),
+         url('/assets/fonts/LCARS_analog.ttf') format('truetype');
     font-display: swap;
   }
   
