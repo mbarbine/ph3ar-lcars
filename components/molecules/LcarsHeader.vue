@@ -21,26 +21,39 @@
   
   <style scoped>
   /* Add the missing @import statement */
-  @import 'path/to/lcars.css';
+  @import 'assets/css/lcars.css';
   
   /* Add the missing .lcars-bg-primary class */
   .lcars-bg-primary {
     /* Add the desired styles */
+    background-color: primary;
   }
   
   /* Add the missing .lcars-fade-in class */
   .lcars-fade-in {
     /* Add the desired styles */
+    animation: fade-in 1s;
   }
   
   /* Add the missing .border-lcarsAccent class */
   .border-lcarsAccent {
     /* Add the desired styles */
+    border-color: lcarsAccent;
   }
   
   .lcars-header {
-    /* Add the desired styles */
-    @apply text-2xl p-4 mb-4 border-b-2 border-lcarsAccent lcars-fade-in;
+      /* Add the desired styles */
+      font-size: 2rem;
+      padding: 4px;
+      margin-bottom: 4px;
+      border-bottom-width: 2px;
+      border-color: lcarsAccent;
+      animation: fade-in 1s;
+  }
+  
+  /* Define the missing lcarsAccent color */
+  :root {
+    --lcarsAccent: #000000;
   }
   </style>
   

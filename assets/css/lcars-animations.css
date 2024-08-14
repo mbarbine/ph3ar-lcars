@@ -1,3 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "~/assets/css/lcars-utilities.css";
+@import "~/assets/css/main.css";
+@import "~/assets/css/lcars-theme.css";
+@import "~/assets/css/lcars.css";
+
+
+
 @keyframes /* lcars */ lcars-fade-in {
     from {
       opacity: 0;

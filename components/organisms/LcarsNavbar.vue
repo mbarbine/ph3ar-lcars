@@ -15,7 +15,12 @@
   
   <style scoped>
   .lcars-navbar {
-    @apply bg-lcarsSecondary p-4 text-white flex items-center justify-between;
+    background-color: var(--bg-lcarsSecondary);
+    padding: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   </style>
   

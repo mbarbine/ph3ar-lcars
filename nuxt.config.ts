@@ -28,12 +28,12 @@ export declare function defineNuxtConfig<T extends NuxtConfig, U extends ConfigL
 
 // Export the Nuxt configuration
 export default defineNuxtConfig({
-  css: [
+css: [
     '~/assets/css/main.css',
     '~/assets/css/lcars-theme.css',
     '~/assets/css/lcars-animations.css',
     '~/assets/css/lcars.css',
-    `~/assets/css/lcars-utilities.css`,
+    '~/assets/css/lcars-utilities.css',
   ],
   buildModules: [
     '@nuxt/typescript-build',
@@ -41,6 +41,8 @@ export default defineNuxtConfig({
     'pinia/nuxt',
     '@nuxtjs/i18n',
   ],
+  compatibilityDate: '2024-08-14',
+
   plugins: [
     '~/plugins/theme-switcher.js',
     '~/plugins/notification.js',

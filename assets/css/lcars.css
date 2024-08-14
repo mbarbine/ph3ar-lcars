@@ -1,3 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "~/assets/css/lcars-utilities.css";
+@import "~/assets/css/main.css";
+@import "~/assets/css/lcars-animations.css";
+@import "~/assets/css/lcars-theme.css";
+
+
+
 @font-face {
     font-family: 'LCARS';
     src: url('/fonts/LCARS_analog.woff2') format('woff2'),

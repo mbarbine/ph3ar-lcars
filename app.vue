@@ -20,7 +20,7 @@
 import { useTheme } from '~/composables/useTheme';
 import { useI18n } from '~/composables/useI18n';
 import { onMounted, ref } from 'vue';
-import LcarsHeader from '~/components/organisms/LcarsHeader.vue';
+import LcarsHeader from '~/components/molecules/LcarsHeader.vue'; // Using LcarsHeader from molecules
 import LcarsSidebar from '~/components/organisms/LcarsSidebar.vue';
 import LcarsFooter from '~/components/organisms/LcarsFooter.vue';
 
@@ -47,15 +47,23 @@ onMounted(() => {
 <style scoped>
 /* Base layout styles */
 .lcars-app {
-  @apply flex flex-col min-h-screen bg-darkBg text-white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--lcars-bg-dark);
+  color: var(--lcars-accent);
 }
 
 .lcars-main {
-  @apply flex flex-1;
+  display: flex;
+  flex: 1;
 }
 
 .lcars-content {
-  @apply flex-1 p-8 overflow-auto bg-lightBg;
+  flex: 1;
+  padding: 8px;
+  overflow: auto;
+  background-color: var(--lcars-bg-light);
 }
 
 /* LCARS-specific color scheme */

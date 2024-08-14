@@ -1,4 +1,10 @@
-/* Utility classes for LCARS styling */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "~/assets/css/main.css";
+@import "~/assets/css/lcars-animations.css";
+@import "~/assets/css/lcars-theme.css";
+@import "~/assets/css/lcars.css";
 
 .lcars-bg-primary {
     background-color: var(--bg-lcarsPrimary);

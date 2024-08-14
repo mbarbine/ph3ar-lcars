@@ -19,7 +19,7 @@
   });
   
   // Import the necessary styles
-  import '@/path/to/lcars.css';
+  import '@/assets/css/lcars.css';
   
   const iconClass = computed(() => {
     return `lcars-icon w-${props.size} h-${props.size} text-${props.color}`;
