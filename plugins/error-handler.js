@@ -1,11 +1,23 @@
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.config.errorHandler = (error, _, info) => {
-      console.error('Global error handler:', error, info);
-      // Here you could send the error to a logging service
-    };
-    nuxtApp.vueApp.config.errorHandler = (err, _, info) => {
-      console.error('Error captured:', err, info);
-      // Implement error reporting logic here, e.g., send to an error tracking service
-    };
-  });
+  nuxtApp.vueApp.config.errorHandler = (err, vm, info) => {
+    console.error('Error:', err);
+    console.info('Error Info:', info);
+    // Optionally report the error to an external service
+  };
+
+  nuxtApp.vueApp.config.warnHandler = (msg, vm, trace) => {
+    console.warn('Warning:', msg);
+    console.info('Trace:', trace);
+  };
+});
+
+
+
+
+
+
+
+
+
+
    

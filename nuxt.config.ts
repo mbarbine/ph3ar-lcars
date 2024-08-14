@@ -1,34 +1,15 @@
-// Declare NuxtConfig and related interfaces
-interface NuxtConfig {
-  css?: string[];
-  buildModules?: string[];
-  plugins?: string[];
-  pwa?: any;
-  i18n?: any;
-  build?: any;
-  modules?: string[];
-}
+import logger, { errorHandler } from './server/api/logger';
 
-interface ConfigLayerMeta {
+interface NuxtConfig {
   buildModules?: string[];
+  // ... other properties
 }
 
 interface InputConfig<T, U> {
-  css?: string[];
   buildModules?: string[];
-  plugins?: string[];
-  pwa?: any;
-  i18n?: any;
-  build?: any;
-  modules?: string[];
+  // ... other properties
 }
 
-// Declare the defineNuxtConfig function
-export declare function defineNuxtConfig<T extends NuxtConfig, U extends ConfigLayerMeta>(
-  config: InputConfig<T, U>
-): T;
-
-// Export the Nuxt configuration
 export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css',
@@ -55,6 +36,10 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxtjs/i18n',
+  ],
+  serverMiddleware: [
+    { path: '/api/logger', handler: logger },
+    { path: '/api/error-handler', handler: errorHandler },
   ],
   pwa: {
     manifest: {
@@ -86,12 +71,6 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   build: {
-    rollupOptions: {
-      external: ['pinia', 'chart.js', '@nuxt/bridge'],
-    },
     transpile: ['vue-i18n', 'pinia'],
-  },
-  generate: {
-    fallback: '404.html',
   },
 });
