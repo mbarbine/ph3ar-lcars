@@ -1,8 +1,8 @@
-import { PiniaPluginContext } from 'pinia';
+// ~/plugins/pinia-plugin.js
+import { defineNuxtPlugin } from '#app';
+import { createPinia } from 'pinia';
 
-export default function (context) {
-  const { store } = context;
-  store.$subscribe(() => {
-    console.log(`State changed in ${store.$id}`);
-  });
-}
+export default defineNuxtPlugin((nuxtApp) => {
+  const pinia = createPinia();
+  nuxtApp.vueApp.use(pinia);
+});

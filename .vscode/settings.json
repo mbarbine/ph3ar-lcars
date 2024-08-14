@@ -3,6 +3,7 @@
         "Lcars",
         "Nuxt",
         "openapi",
+        "pinia-",
         "tailwindcss"
     ]
 }
