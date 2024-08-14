@@ -8,8 +8,8 @@ self.addEventListener('install', (event) => {
         '/images/logo.svg',
         '/assets/css/main.css',
         '/assets/css/lcars-theme.css',
-        '/assets/css/lcars-animations.css',
-        // Add more assets that should be cached
+        '/assets/css/lcars-animations.css', // Removed duplicate
+        '/assets/css/lcars.css',
       ]);
     })
   );

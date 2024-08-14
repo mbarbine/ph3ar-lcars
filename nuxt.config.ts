@@ -6,7 +6,7 @@ interface NuxtConfig {
   pwa?: any;
   i18n?: any;
   build?: any;
-  modules?: string[]; // Added to support additional Nuxt modules
+  modules?: string[];
 }
 
 interface ConfigLayerMeta {
@@ -20,7 +20,7 @@ interface InputConfig<T, U> {
   pwa?: any;
   i18n?: any;
   build?: any;
-  modules?: string[]; // Added to support additional Nuxt modules
+  modules?: string[];
 }
 
 // Declare the defineNuxtConfig function
@@ -44,7 +44,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   compatibilityDate: '2024-08-14',
-
   plugins: [
     '~/plugins/theme-switcher.js',
     '~/plugins/notification.js',
@@ -56,8 +55,7 @@ export default defineNuxtConfig({
     '~/plugins/pwa.js',
   ],
   modules: [
-    '@nuxtjs/pwa', // Ensure the PWA module is included properly
-    '@nuxtjs/i18n', // Ensure the i18n module is included properly
+    '@nuxtjs/i18n',
   ],
   pwa: {
     manifest: {
@@ -96,11 +94,11 @@ export default defineNuxtConfig({
   },
   build: {
     rollupOptions: {
-      external: ['pinia', 'chart.js', '@nuxt/bridge'], // External dependencies
+      external: ['pinia', 'chart.js', '@nuxt/bridge'],
     },
-    transpile: ['vue-i18n', 'pinia'], // Ensure these modules are properly transpiled
+    transpile: ['vue-i18n', 'pinia'],
   },
   generate: {
-    fallback: '404.html', // Ensure fallback is set for static site generation
+    fallback: '404.html',
   },
 });
