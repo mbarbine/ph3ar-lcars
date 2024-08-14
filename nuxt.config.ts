@@ -5,6 +5,7 @@ interface NuxtConfig {
   plugins?: string[];
   pwa?: any;
   i18n?: any;
+  build?: any;
 }
 
 interface ConfigLayerMeta {
@@ -17,6 +18,7 @@ interface InputConfig<T, U> {
   plugins?: string[];
   pwa?: any;
   i18n?: any;
+  build?: any;
 }
 
 // Declare the defineNuxtConfig function
@@ -80,6 +82,11 @@ export default defineNuxtConfig({
         en: require('./public/localizations/en.json'),
         fr: require('./public/localizations/fr.json'),
       },
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: ['pinia', 'chart.js', '@nuxt/bridge'], // Add external dependencies
     },
   },
 });
