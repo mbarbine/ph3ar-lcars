@@ -32,6 +32,8 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     '~/assets/css/lcars-theme.css',
     '~/assets/css/lcars-animations.css',
+    '~/assets/css/lcars.css',
+    `~/assets/css/lcars-utilities.css`,
   ],
   buildModules: [
     '@nuxt/typescript-build',

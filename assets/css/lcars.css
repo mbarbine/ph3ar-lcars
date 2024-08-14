@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'LCARS';
+    src: url('/fonts/LCARS_analog.woff2') format('woff2'),
+         url('/fonts/LCARS_analog.woff') format('woff'),
+         url('/fonts/LCARS_analog.ttf') format('truetype');
+    font-display: swap;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'LCARS';
+  }
+  
+  a {
+    color: var(--lcarsAccent);
+  }
+  
+  .lcars-sidebar {
+    background-color: var(--lcarsSecondary);
+    color: var(--lcarsAccent);
+  }
+  
+  .lcars-button {
+    padding-top: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    font-size: 1.5rem;
+    transition: colors;
+  }
+  
+  .lcars-button-primary {
+    background-color: var(--lcarsPrimary);
+    &:hover {
+      background-color: var(--lcarsHighlight);
+    }
+  }
+  
+  .lcars-button-secondary {
+    background-color: var(--lcarsSecondary);
+    &:hover {
+      background-color: var(--lcarsHighlight);
+    }
+  }
+  
+  .lcars-panel {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .lcars-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-color: var(--lcarsAccent);
+  }
+  
