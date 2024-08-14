@@ -2,18 +2,18 @@
   <input
     :class="inputClass"
     v-bind="$attrs"
-    v-on="listeners"
   />
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   variant: {
     type: String,
     default: 'primary',
   },
 });
-</script>
 
 const inputClass = computed(() => {
   return `lcars-input lcars-bg-${props.variant} lcars-rounded lcars-padding`;
@@ -21,20 +21,21 @@ const inputClass = computed(() => {
 </script>
 
 <style scoped lang="scss">
+@import "@/styles/variables.scss";
+
 .lcars-input {
-  font-size: 1rem; /* Equivalent to 'text-lg' */
-  transition: color 0.2s ease-in-out; /* Equivalent to 'transition-colors' */
+  font-size: 1.5rem;
+  transition: color 0.3s;
+  animation: fade-in 0.5s;
 }
 
 .lcars-bg-primary {
-  background-color: var(--lcars-primary, #ff9933);
+  background-color: $lcarsPrimary;
   color: white;
 }
 
 .lcars-bg-secondary {
-  background-color: var(--lcars-secondary, #3366cc);
+  background-color: $lcarsSecondary;
   color: white;
 }
-
-/* Add other necessary styles here */
 </style>
