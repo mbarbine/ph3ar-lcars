@@ -8,7 +8,8 @@ yarn-error.log*
 .output/
 temp/
 /temp/
-
+.output
+.nuxt
 # Nuxt.js build output
 .nuxt/
 dist/
