@@ -39,6 +39,8 @@ const iconClass = computed(() => {
 </script>
 
 <style scoped>
+@import 'postcss-apply';
+
 .lcars-icon {
   @apply fill-current; /* Apply current color to the SVG fill */
 }

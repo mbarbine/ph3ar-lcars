@@ -13,7 +13,7 @@
   import LcarsHeader from '~/components/molecules/LcarsHeader.vue';
   import LcarsForm from '~/components/molecules/LcarsForm.vue';
   import LcarsInput from '~/components/atoms/LcarsInput.vue';
-  import { useAuth } from '~/composables/useAuth.js';
+  import { useAuth } from '~/composables/useAuth';
   
   const username = ref('');
   const password = ref('');
@@ -24,7 +24,7 @@
   };
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
   .lcars-auth-page {
     @apply p-8 bg-darkBg text-white;
   }

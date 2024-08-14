@@ -12,7 +12,9 @@
   
   <style scoped>
   .lcars-page {
-    @apply p-8 bg-darkBg text-white;
+    padding: 2rem;
+    background-color: #333333;
+    color: #ffffff;
   }
   
   .lcars-img {

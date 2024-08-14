@@ -46,7 +46,9 @@ const emitClick = () => {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
+@import '~@vue/cli-plugin-generate-stylelint-config';
+
 .lcars-button {
   @apply text-lg transition-colors lcars-fade-in;
 }

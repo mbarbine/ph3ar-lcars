@@ -13,7 +13,9 @@
   
   <style scoped>
   .lcars-page {
-    @apply p-8 bg-darkBg text-white;
+    padding: 2rem;
+    background-color: var(--darkBg);
+    color: white;
   }
   </style>
   

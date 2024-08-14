@@ -20,6 +20,22 @@ const gridItems = ref([
 
 <style scoped>
 .lcars-panel {
-  @apply bg-lcarsPrimary text-white rounded p-4 lcars-pulse;
+  background-color: var(--bg-lcarsPrimary);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  animation: lcars-pulse 1s infinite;
+}
+
+@keyframes lcars-pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

@@ -27,7 +27,9 @@
   };
   </script>
   
-  <style scoped>
+  <style lang="scss" scoped>
+  @import "@/styles/variables.scss";
+  
   .lcars-auth-page {
     @apply p-8 bg-darkBg text-white;
   }

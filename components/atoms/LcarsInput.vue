@@ -22,15 +22,21 @@ const inputClass = computed(() => {
 </script>
 
 <style scoped lang="scss">
+@use 'sass:meta';
+
 .lcars-input {
-  @apply text-lg transition-colors lcars-fade-in;
+  @include meta.load-css('text-lg');
+  @include meta.load-css('transition-colors');
+  @include meta.load-css('lcars-fade-in');
 }
 
 .lcars-bg-primary {
-  @apply bg-lcarsPrimary text-white;
+  @include meta.load-css('bg-lcarsPrimary');
+  @include meta.load-css('text-white');
 }
 
 .lcars-bg-secondary {
-  @apply bg-lcarsSecondary text-white;
+  @include meta.load-css('bg-lcarsSecondary');
+  @include meta.load-css('text-white');
 }
 </style>

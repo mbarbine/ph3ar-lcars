@@ -30,14 +30,22 @@ const notificationClass = computed(() => {
 
 <style scoped>
 .lcars-notification {
-  @apply p-4 rounded-lg mb-4;
+  /* Add individual CSS properties instead of using @apply */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .lcars-fade-in {
-  @apply transition-opacity duration-300 ease-in-out opacity-100;
+  /* Add individual CSS properties instead of using @apply */
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
 }
 
 .hidden {
-  @apply opacity-0;
+  /* Add individual CSS properties instead of using @apply */
+  opacity: 0;
 }
 </style>
