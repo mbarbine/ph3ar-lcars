@@ -18,7 +18,7 @@
     "format": "prettier --write ."
   },
   "name": "lcars-nuxt-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Star Trek LCARS inspired Nuxt.js app",
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.24.7",
